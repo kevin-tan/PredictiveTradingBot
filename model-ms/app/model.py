@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 def getLinearPredictions(df):
     ''' Outputs the predictions of an ordinary least squares linear regression
         for the close price of given stocks.
@@ -29,7 +32,7 @@ def getLinearPredictions(df):
     print('MSE:', metrics.mean_squared_error(y_test, predictions))
     print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, predictions)))
 
-if __name__ = '__main__':
+if __name__ == "__main__":
     BASE_PATH = '' # Add path of data here
-    Stocks_df = pd.read_csv(BASE_PATH))
+    Stocks_df = pd.read_csv(BASE_PATH)
     getLinearPredictions(Stocks_df)
